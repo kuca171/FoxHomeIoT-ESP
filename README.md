@@ -8,5 +8,10 @@
  
  **+ budoucí projekt šablony odesílatele hodnot z čidel pro ESP32 a ESP8266**
  
-## Zdroje
+## Supported device
+
+ - ESP32
+ - ESP8266
+
+## Resources
  - https://randomnerdtutorials.com/esp-now-auto-pairing-esp32-esp8266/
