@@ -1,4 +1,4 @@
-# FoxHomeIoT-ESP32-Bridge
+# FoxHomeIoT-ESP
 
 ## Myšlenka
 
