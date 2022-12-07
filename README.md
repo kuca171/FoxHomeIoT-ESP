@@ -23,3 +23,4 @@
 
 ## Resources
  - https://randomnerdtutorials.com/esp-now-auto-pairing-esp32-esp8266/
+ - https://github.com/Servayejc
