@@ -4,7 +4,7 @@
 
  - [x] ESP-NOW - receiver (master) - příjemce
  - [x] ESP-NOW autopair - autopárování
- - [ ] MQTT -> Hassio (ESP-NOW receive message -> MQTT resend -> Hassio)
+ - [x] MQTT -> Hassio (ESP-NOW receive message -> MQTT resend -> Hassio)
  
  **+ budoucí projekt šablony odesílatele hodnot z čidel pro ESP32 a ESP8266**
  
