@@ -1,7 +1,9 @@
 // ----------------------------------------------------------------------------
 // firmware name: FoxHomeIoT-ESP32-Bridge
+// description: receiving ESP-NOW message from slaves and resend 
+//              message to mqtt
 // © 2022 Jiří Kučera
-// version: 0.0.1beta
+// version: 0.1.0beta
 // ----------------------------------------------------------------------------
 
 // ----------------------------------------------------------------------------
@@ -11,15 +13,20 @@
 #include <WiFi.h>
 #include <ArduinoJson.h>
 #include <PubSubClient.h>
-#include "secret.h"
 
 // ----------------------------------------------------------------------------
 // Definition of global constants
 // ----------------------------------------------------------------------------
 
+// wifi setting
+const char* ssid = "kuca";
+const char* password = "lisak397";
+
 // mqtt setting
 const char* mqtt_server = "10.0.0.112";
 const int   mqtt_port   = 1883;
+const char* MQTT_USER = "mymqtt";
+const char* MQTT_PASSWORD = "foxhome1";
 
 const char* DEVICE_NAME = "ESP-NOW-Bridge"; 
 const char* TOPIC_MQTT_AVAILABILITY   = "bridge/availability";
@@ -43,6 +50,7 @@ typedef struct struct_message {
   uint8_t id;
   float temp;
   float hum;
+  float pres;
   unsigned int readingId;
 } struct_message;
 
@@ -73,7 +81,8 @@ void printMAC(const uint8_t * mac_addr){
   Serial.print(macStr);
 }
 
-bool addPeer(const uint8_t *peer_addr) {      // add pairing
+// add pairing
+bool addPeer(const uint8_t *peer_addr) {      
   memset(&slave, 0, sizeof(slave));
   const esp_now_peer_info_t *peer = &slave;
   memcpy(slave.peer_addr, peer_addr, 6);
@@ -118,39 +127,43 @@ void OnDataRecv(const uint8_t * mac_addr, const uint8_t *incomingData, int len) 
   Serial.println();
   StaticJsonDocument<1000> root;
   String payload;
-  uint8_t type = incomingData[0];       // first message byte is the type of message 
+  // first message byte is the type of message 
+  uint8_t type = incomingData[0];       
   switch (type) {
-  case DATA :                           // the message is data type
-    memcpy(&incomingReadings, incomingData, sizeof(incomingReadings));
-    // create a JSON document with received data and send it by event to the web page
-    root["id"] = incomingReadings.id;
-    root["temperature"] = incomingReadings.temp;
-    root["humidity"] = incomingReadings.hum;
-    root["readingId"] = String(incomingReadings.readingId);
-    serializeJson(root, payload);
-    Serial.print("mqtt send :");
-    serializeJson(root, Serial);
-    //events.send(payload.c_str(), "new_readings", millis());
-    Serial.println();
-    break;
-  
-  case PAIRING:                            // the message is a pairing request 
-    memcpy(&pairingData, incomingData, sizeof(pairingData));
-    Serial.println(pairingData.msgType);
-    Serial.println(pairingData.id);
-    Serial.print("Pairing request from: ");
-    printMAC(mac_addr);
-    Serial.println();
-    Serial.println(pairingData.channel);
-    if (pairingData.id > 0) {     // do not replay to server itself
-      if (pairingData.msgType == PAIRING) { 
-        pairingData.id = 0;       // 0 is server
-        // Server is in AP_STA mode: peers need to send data to server soft AP MAC address 
-        WiFi.softAPmacAddress(pairingData.macAddr);   
-        pairingData.channel = chan;
-        Serial.println("send response");
-        esp_err_t result = esp_now_send(mac_addr, (uint8_t *) &pairingData, sizeof(pairingData));
-        addPeer(mac_addr);
+    // the message is data type
+    case DATA :                           
+      memcpy(&incomingReadings, incomingData, sizeof(incomingReadings));
+      // create a JSON document with received data and send it by event to the web page
+      root["id"]          = incomingReadings.id;
+      root["temperature"] = incomingReadings.temp;
+      root["humidity"]    = incomingReadings.hum;
+      root["pressure"]    = incomingReadings.pres;
+      root["readingId"]   = String(incomingReadings.readingId);
+      serializeJson(root, payload);
+      Serial.print("mqtt send :");
+      serializeJson(root, Serial);
+      //events.send(payload.c_str(), "new_readings", millis());
+      Serial.println();
+      break;
+
+    // the message is a pairing request 
+    case PAIRING:                            
+      memcpy(&pairingData, incomingData, sizeof(pairingData));
+      Serial.println(pairingData.msgType);
+      Serial.println(pairingData.id);
+      Serial.print("Pairing request from: ");
+      printMAC(mac_addr);
+      Serial.println();
+      Serial.println(pairingData.channel);
+      if (pairingData.id > 0) {     // do not replay to server itself
+        if (pairingData.msgType == PAIRING) { 
+          pairingData.id = 0;       // 0 is server
+          // Server is in AP_STA mode: peers need to send data to server soft AP MAC address 
+          WiFi.softAPmacAddress(pairingData.macAddr);   
+          pairingData.channel = chan;
+          Serial.println("send response");
+          esp_err_t result = esp_now_send(mac_addr, (uint8_t *) &pairingData, sizeof(pairingData));
+          addPeer(mac_addr);
       }  
     }  
     break; 
@@ -159,6 +172,7 @@ void OnDataRecv(const uint8_t * mac_addr, const uint8_t *incomingData, int len) 
 
 void initESP_NOW(){
     // Init ESP-NOW
+    Serial.println("Init ESP-NOW");
     if (esp_now_init() != ESP_OK) {
       Serial.println("Error initializing ESP-NOW");
       return;
@@ -175,7 +189,7 @@ void connectMqtt() {
   while (!client.connected()) {
     Serial.println("MQTT connecting...");
 
-    if (client.connect(DEVICE_NAME, SECRET_MQTT_USER, SECRET_MQTT_PASSWORD, 
+    if (client.connect(DEVICE_NAME, MQTT_USER, MQTT_PASSWORD, 
                        TOPIC_MQTT_AVAILABILITY, 1, true, "offline")) {
       Serial.println("MQTT connected");
       client.publish(TOPIC_MQTT_AVAILABILITY, "online", true);
@@ -195,10 +209,9 @@ void connectMqtt() {
 // ----------------------------------------------------------------------------
 
 void connectWifi() {
-  // Set the device as a Station and Soft Access Point simultaneously
-  WiFi.mode(WIFI_AP_STA);
   // Set device as a Wi-Fi Station
-  WiFi.begin(secret_ssid, secret_password);
+  Serial.println("wifi connecting...");
+  WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED) {
     delay(1000);
     Serial.println("Setting as a Wi-Fi Station..");
@@ -243,7 +256,11 @@ void setup() {
   Serial.print("Server MAC Address:  ");
   Serial.println(WiFi.macAddress());
 
+  // Set the device as a Station and Soft Access Point simultaneously
+  WiFi.mode(WIFI_AP_STA);
+
   connectWifi();  
+  client.setServer(mqtt_server, mqtt_port);
 
   initESP_NOW();
 }
@@ -254,6 +271,9 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
+  if (WiFi.status() != WL_CONNECTED) {
+    connectWifi();
+  }
   if (!client.connected()) {
     connectMqtt();
   }
