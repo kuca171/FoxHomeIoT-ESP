@@ -5,8 +5,8 @@
  - [x] ESP-NOW - receiver (master) - příjemce
  - [x] ESP-NOW autopair - autopárování
  - [x] MQTT -> Hassio (ESP-NOW receive message -> MQTT resend -> Hassio)
- - [ ] přidat stav baterie do struktury ESP-NOW
- - [ ] opravit plnění hodnot ze senzorů + zaokrouhlení
+ - [x] přidat stav baterie do struktury ESP-NOW
+ - [x] opravit plnění hodnot ze senzorů 
  - [ ] dořešit mqtt publish
  - [ ] Oversampling - opakované čtení dat ze senzorů (x-krát a udělat průměr)
  - [ ] sjednotit projekt zde na gitu
