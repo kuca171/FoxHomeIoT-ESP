@@ -9,8 +9,9 @@
  - [x] opravit plnění hodnot ze senzorů 
  - [ ] dořešit mqtt publish
  - [ ] Oversampling - opakované čtení dat ze senzorů (x-krát a udělat průměr)
- - [ ] sjednotit projekt zde na gitu
+ - [x] sjednotit projekt zde na gitu
  - [ ] upravit README.md
+ - [ ] dokumentace
  
 ## Supported device
 
