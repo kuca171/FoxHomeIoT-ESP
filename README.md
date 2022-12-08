@@ -7,9 +7,10 @@
  - [x] MQTT -> Hassio (ESP-NOW receive message -> MQTT resend -> Hassio)
  - [x] přidat stav baterie do struktury ESP-NOW
  - [x] opravit plnění hodnot ze senzorů 
- - [ ] dořešit mqtt publish
+ - [x] dořešit mqtt publish
  - [x] Oversampling - opakované čtení dat ze senzorů (x-krát a udělat průměr) - knihovna bme má default 16x
  - [x] sjednotit projekt zde na gitu
+ - [ ] zpracování v HASSIO
  - [ ] upravit README.md
  - [ ] dokumentace
  
