@@ -13,7 +13,7 @@
  - [ ] upravit README.md
  - [ ] dokumentace
  
-## Supported device
+## Supported ESP device
 
  - ESP32
  - ESP8266
