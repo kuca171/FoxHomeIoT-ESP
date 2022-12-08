@@ -30,6 +30,7 @@ const char* MQTT_PASSWORD = "foxhome1";
 
 const char* DEVICE_NAME = "FoxHomeIoT-Bridge"; 
 const char* TOPIC_MQTT_AVAILABILITY   = "bridge/availability";
+const char* TOPIC_MQTT_RESEND_SENSORS = "bridge/slave/sensors";
 
 // ----------------------------------------------------------------------------
 // Definition of global variables
@@ -67,6 +68,8 @@ struct_message incomingReadings;
 struct_message outgoingSetpoints;
 struct_pairing pairingData;
 
+char smacStr[18];
+
 // MQTT wifi
 WiFiClient espClient;
 PubSubClient client(espClient);
@@ -80,6 +83,11 @@ void printMAC(const uint8_t * mac_addr){
   snprintf(macStr, sizeof(macStr), "%02x:%02x:%02x:%02x:%02x:%02x",
            mac_addr[0], mac_addr[1], mac_addr[2], mac_addr[3], mac_addr[4], mac_addr[5]);
   Serial.print(macStr);
+}
+
+void senderMacToStr(const uint8_t * mac_addr) {
+  snprintf(smacStr, sizeof(smacStr), "%02x:%02x:%02x:%02x:%02x:%02x",
+           mac_addr[0], mac_addr[1], mac_addr[2], mac_addr[3], mac_addr[4], mac_addr[5]);
 }
 
 // add pairing
@@ -132,10 +140,12 @@ void OnDataRecv(const uint8_t * mac_addr, const uint8_t *incomingData, int len) 
   uint8_t type = incomingData[0];       
   switch (type) {
     // the message is data type
-    case DATA :                           
+    case DATA :      
+      senderMacToStr(mac_addr);                     
       memcpy(&incomingReadings, incomingData, sizeof(incomingReadings));
       // create a JSON document with received data and send it by event to the web page
       root["id"]          = incomingReadings.id;
+      root["mac_addr"]    = smacStr;
       root["temperature"] = incomingReadings.temp;
       root["humidity"]    = incomingReadings.hum;
       root["pressure"]    = incomingReadings.pres;
@@ -143,11 +153,20 @@ void OnDataRecv(const uint8_t * mac_addr, const uint8_t *incomingData, int len) 
       root["readingId"]   = String(incomingReadings.readingId);
       serializeJson(root, payload);
       Serial.print("mqtt send :");
-      serializeJson(root, Serial);
+
+      if (client.publish(TOPIC_MQTT_RESEND_SENSORS, payload.c_str())) {
+        Serial.println("Published to " + String(TOPIC_MQTT_RESEND_SENSORS) + ":");
+        // Write JSON document to serial port
+        serializeJson(root, Serial);
+        Serial.println("");
+      } else {
+        Serial.println("MQTT publish error");
+      }
+
       //events.send(payload.c_str(), "new_readings", millis());
       Serial.println();
       break;
-
+    
     // the message is a pairing request 
     case PAIRING:                            
       memcpy(&pairingData, incomingData, sizeof(pairingData));

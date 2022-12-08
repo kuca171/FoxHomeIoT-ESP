@@ -67,6 +67,12 @@ MessageType messageType;
 #endif  
 int channel = 1;
 
+// for reading sensors
+float temperature =0;
+float humidity = 0;
+float pressure = 0;
+int battery = 0;
+
 unsigned long currentMillis = millis();
 unsigned long previousMillis = 0;   // Stores last time temperature was published
 const long interval = 10000;        // Interval at which to publish sensor readings
@@ -249,16 +255,24 @@ void loop() {
     unsigned long currentMillis = millis();
     if (currentMillis - previousMillis >= interval) {
       // Save the last time a new reading was published
+      ReadDataSensors();
       previousMillis = currentMillis;
       //Set values to send
       myData.msgType    = DATA;
       myData.id         = BOARD_ID;
-      myData.temp       = bme.readTemperature();
-      myData.hum        = bme.readHumidity();
-      myData.pres       = bme.readPressure() / 100.0F;
-      myData.batt       = 0;
+      myData.temp       = temperature;
+      myData.hum        = humidity;
+      myData.pres       = pressure;
+      myData.batt       = battery;
       myData.readingId  = readingId++;
       esp_err_t result  = esp_now_send(serverAddress, (uint8_t *) &myData, sizeof(myData));
     }
   }
+}
+
+void ReadDataSensors () {
+  temperature = bme.readTemperature();  
+  humidity    = bme.readHumidity();
+  pressure    = bme.readPressure() / 100.0F;
+  battery     = 0; // analogRead(battery_pin);
 }

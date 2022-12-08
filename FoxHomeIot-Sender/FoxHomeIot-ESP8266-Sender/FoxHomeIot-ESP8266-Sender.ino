@@ -62,6 +62,12 @@ MessageType messageType;
 
 uint8_t channel = 1;
 
+// for reading sensors
+float temperature =0;
+float humidity = 0;
+float pressure = 0;
+int battery = 0;
+
 unsigned long currentMillis   = millis(); 
 unsigned long previousMillis  = 0;    // will store last time DHT was updated 
 const long interval = 10000; 
@@ -243,15 +249,16 @@ void loop() {
     static unsigned long lastEventTime = millis();
     static const unsigned long EVENT_INTERVAL_MS = 10000;
     if ((millis() - lastEventTime) > EVENT_INTERVAL_MS) {
+      ReadDataSensors();
       Serial.print(".");
 
       //Set values to send
       myData.msgType = DATA;
       myData.id = BOARD_ID;
-      myData.temp       = bme.readTemperature();
-      myData.hum        = bme.readHumidity();
-      myData.pres       = bme.readPressure() / 100.0F;
-      myData.batt       = 0;
+      myData.temp       = temperature;
+      myData.hum        = humidity;
+      myData.pres       = pressure;
+      myData.batt       = battery;
       myData.readingId = readingId ++;
       
       // Send message via ESP-NOW to all peers 
@@ -259,4 +266,11 @@ void loop() {
       lastEventTime = millis();
     }
   }
+}
+
+void ReadDataSensors () {
+  temperature = bme.readTemperature();  
+  humidity    = bme.readHumidity();
+  pressure    = bme.readPressure() / 100.0F;
+  battery     = 0; // analogRead(battery_pin);
 }
