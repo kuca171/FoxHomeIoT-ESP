@@ -1,6 +1,6 @@
 # FoxHomeIoT-ESP
 
-## Myšlenka
+## TO-DO
 
  - [x] ESP-NOW - receiver (master) - příjemce
  - [x] ESP-NOW autopair - autopárování
@@ -15,18 +15,3 @@
  - [ ] upravit README.md
  - [ ] dokumentace
  - [ ] vyřešit komunikaci zpět (Salimu upozorňovač) -> odesílat na všechny desky a vybírat dle BoardID
- 
-## Supported ESP device
-
- - ESP32
- - ESP8266
-
-## Supported sensors
-
- - BME280
- - you can modify the source code and add your own sensors
-  
-## Resources
- - https://randomnerdtutorials.com/esp-now-auto-pairing-esp32-esp8266/
- - https://github.com/Servayejc
- - https://www.espressif.com/
