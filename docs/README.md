@@ -3,7 +3,7 @@
 ## Supported ESP device
 
  - ESP32
- - ESP8266
+ - ESP8266 - only beta not tested
 
 ## Supported sensors
 
