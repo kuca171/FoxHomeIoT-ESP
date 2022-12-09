@@ -10,10 +10,11 @@
  - [x] dořešit mqtt publish
  - [x] Oversampling - opakované čtení dat ze senzorů (x-krát a udělat průměr) - knihovna bme má default 16x
  - [x] sjednotit projekt zde na gitu
- - [ ] otestovat přenos z ESP-NOW na mqtt
+ - [x] otestovat přenos z ESP-NOW na mqtt
  - [ ] zpracování v HASSIO
  - [ ] upravit README.md
  - [ ] dokumentace
+ - [ ] vyřešit komunikaci zpět (Salimu upozorňovač)
  
 ## Supported ESP device
 
