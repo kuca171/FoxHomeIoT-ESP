@@ -14,7 +14,7 @@
  - [ ] zpracování v HASSIO
  - [ ] upravit README.md
  - [ ] dokumentace
- - [ ] vyřešit komunikaci zpět (Salimu upozorňovač)
+ - [ ] vyřešit komunikaci zpět (Salimu upozorňovač) -> odesílat na všechny desky a vybírat dle BoardID
  
 ## Supported ESP device
 
