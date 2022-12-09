@@ -23,7 +23,7 @@ Programy pro desky ESP32 a ESP8266, sloužící k přenosu dat z míst, kde nen�
 ## Podporované čidla
 
  - BME280
- - lze upravit zdrojový kód, tak aby
+ - programy je možné upravit, tj. je možné připojit jakékoliv čidla, která dané desky podporují
   
 ## Zdroje
  - <a href="https://randomnerdtutorials.com/esp-now-auto-pairing-esp32-esp8266/">https://randomnerdtutorials.com/esp-now-auto-pairing-esp32-esp8266/</a>
