@@ -15,6 +15,6 @@
  - you can modify the source code and add your own sensors
   
 ## Resources
- - https://randomnerdtutorials.com/esp-now-auto-pairing-esp32-esp8266/
- - https://github.com/Servayejc
- - https://www.espressif.com/
+ - <a href="https://randomnerdtutorials.com/esp-now-auto-pairing-esp32-esp8266/">https://randomnerdtutorials.com/esp-now-auto-pairing-esp32-esp8266/</a>
+ - <a href="https://github.com/Servayejc">https://github.com/Servayejc</a>
+ - <a href="https://www.espressif.com/">https://www.espressif.com/</a>
