@@ -6,10 +6,10 @@
 
 ## Obsah
 
-- [Popis](Popis)
-- [Podporované ESP](Podporované-ESP)
-- [Podporované ESP](Podporované-senzory)
-- [Zdroje](Zdroje)
+- [Popis](#popis)
+- [Podporované ESP](#podporované-ESP)
+- [Podporované ESP](#podporované-senzory)
+- [Zdroje](#zdroje)
 
 ## Popis
 
