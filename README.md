@@ -24,7 +24,7 @@
 ## Supported sensors
 
  - BME280
- - all arduino IDE supported (must edit struct for data and adding reading your sensors)
+ - you can modify the source code and add your own sensors
   
 ## Resources
  - https://randomnerdtutorials.com/esp-now-auto-pairing-esp32-esp8266/
