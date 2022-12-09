@@ -2,6 +2,8 @@
 
 ## Translation
 
+- [Czech](README.cz.md)
+
 ## Supported ESP device
 
  - ESP32
