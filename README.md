@@ -16,4 +16,4 @@
  - [ ] zpracování v HASSIO
  - [ ] upravit README.md
  - [ ] dokumentace
- - [ ] vyřešit komunikaci zpět (Salimu upozorňovač) -> odesílat na všechny desky a vybírat dle BoardID
+ - [ ] vyřešit komunikaci zpět (Salimu upozorňovač) -> odesílat na všechny desky a vybírat dle BoardID (nový parametr command ve zpráve s hodnoty senzorů? nebo nový typ zprávy COMMAND?)
