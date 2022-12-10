@@ -3,7 +3,7 @@
 // description: receiving ESP-NOW message from slaves and resend 
 //              message to mqtt
 // © 2022 Jiří Kučera
-// version: 0.1.0beta
+// version: 0.1.1
 // ----------------------------------------------------------------------------
 
 // ----------------------------------------------------------------------------
@@ -39,7 +39,7 @@ const char* TOPIC_MQTT_RESEND_SENSORS = "bridge/slave/sensors";
 esp_now_peer_info_t slave;
 int chan; 
 
-enum MessageType {PAIRING, DATA,};
+enum MessageType {PAIRING, DATA, COMMAND,};
 MessageType messageType;
 
 int counter = 0;

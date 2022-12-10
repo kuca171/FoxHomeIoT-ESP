@@ -3,7 +3,7 @@
 // description: send ESP-NOW message to master and from master resend 
 //              message to mqtt
 // © 2022 Jiří Kučera
-// version: 0.0.1beta
+// version: 0.1.1beta
 // ----------------------------------------------------------------------------
 
 // ----------------------------------------------------------------------------
@@ -57,7 +57,7 @@ struct_pairing pairingData;
 enum PairingStatus {PAIR_REQUEST, PAIR_REQUESTED, PAIR_PAIRED, };
 PairingStatus pairingStatus = PAIR_REQUEST;
 
-enum MessageType {PAIRING, DATA,};
+enum MessageType {PAIRING, DATA, COMMAND,};
 MessageType messageType;
 
 uint8_t channel = 1;
@@ -267,6 +267,10 @@ void loop() {
     }
   }
 }
+
+// ----------------------------------------------------------------------------
+// ReadDataSensors
+// ----------------------------------------------------------------------------
 
 void ReadDataSensors () {
   temperature = bme.readTemperature();  
