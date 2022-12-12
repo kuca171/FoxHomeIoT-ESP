@@ -12,7 +12,8 @@
  - [x] sjednotit projekt zde na gitu
  - [x] otestovat přenos z ESP-NOW na mqtt
  - [ ] otestovat wemos d1 mini
- - [ ] deep sleep
+ - [ ] deep sleep - vyřešit odeslání a sleep
+ - [ ] upravit kód pro deep sleep a pro doručení command
  - [ ] zpracování v HASSIO
  - [ ] upravit README.md
  - [ ] dokumentace
