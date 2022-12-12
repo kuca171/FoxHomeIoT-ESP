@@ -15,7 +15,7 @@
  - [x] deep sleep ESP32
  - [ ] otestovat wemos d1 mini - přidán deep sleep
  - [ ] otestovat ESP32 - přidán deep sleep
- - [ ] upravit kód pro deep sleep a pro doručení command
+ - [ ] command and state - příjem příkazu a odeslání stavu
  - [ ] zpracování v HASSIO
  - [ ] upravit README.md
  - [ ] dokumentace
