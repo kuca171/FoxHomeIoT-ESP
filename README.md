@@ -13,7 +13,7 @@
  - [x] otestovat přenos z ESP-NOW na mqtt
  - [ ] otestovat wemos d1 mini
  - [x] deep sleep - vyřešit odeslání a sleep
- - [x] deep sleep ESP32
+ - [ ] deep sleep ESP32
  - [ ] upravit kód pro deep sleep a pro doručení command
  - [ ] zpracování v HASSIO
  - [ ] upravit README.md
