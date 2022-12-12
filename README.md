@@ -11,9 +11,10 @@
  - [x] Oversampling - opakované čtení dat ze senzorů (x-krát a udělat průměr) - knihovna bme má default 16x
  - [x] sjednotit projekt zde na gitu
  - [x] otestovat přenos z ESP-NOW na mqtt
- - [ ] otestovat wemos d1 mini
  - [x] deep sleep - vyřešit odeslání a sleep
- - [ ] deep sleep ESP32
+ - [x] deep sleep ESP32
+ - [ ] otestovat wemos d1 mini - přidán deep sleep
+ - [ ] otestovat ESP32 - přidán deep sleep
  - [ ] upravit kód pro deep sleep a pro doručení command
  - [ ] zpracování v HASSIO
  - [ ] upravit README.md
