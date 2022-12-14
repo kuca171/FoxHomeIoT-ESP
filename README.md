@@ -14,10 +14,9 @@
  - [x] deep sleep - vyřešit odeslání a sleep
  - [x] deep sleep ESP32
  - [ ] otestovat wemos d1 mini - přidán deep sleep
- - [ ] otestovat ESP32 - přidán deep sleep
- - [ ] command and state - dokončit v bridge
+ - [x] otestovat ESP32 - přidán deep sleep
+ - [x] command and state - dokončit v bridge
  - [ ] command and state - ESP8266 dokončit
  - [ ] zpracování v HASSIO
  - [ ] upravit README.md
  - [ ] dokumentace
- - [ ] vyřešit komunikaci zpět (Salimu upozorňovač) -> odesílat na všechny desky a vybírat dle BoardID (nový parametr command ve zpráve s hodnoty senzorů? nebo nový typ zprávy COMMAND?)
