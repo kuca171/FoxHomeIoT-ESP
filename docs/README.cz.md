@@ -7,6 +7,7 @@
 ## Obsah
 
 - [Popis](#popis)
+- [Přehled komunikace](#přehled-komunikace)
 - [Podporované ESP](#podporované-ESP)
 - [Podporované čidla](#podporované-čidla)
 - [Zdroje](#zdroje)
@@ -17,7 +18,17 @@ Programy pro desky ESP32 a ESP8266, sloužící k přenosu dat z míst, kde nen�
 
 *Nyní pracuji na komunikaci obrácené, aby bylo možné k odesílateli připojit například relé.*
 
-## Podporované ESP 
+## Přehled komunikace
+
+### Data ze senzorů
+
+![alt reading sensors data](img/1.png)
+
+### Řízení zařízení
+
+![alt reading device control](img/2.png)
+
+## Podporované ESP
 
  - ESP32
  - ESP8266 - jen beta, netestováno
@@ -26,7 +37,7 @@ Programy pro desky ESP32 a ESP8266, sloužící k přenosu dat z míst, kde nen�
 
  - BME280
  - programy je možné upravit, tj. je možné připojit jakékoliv čidla, která dané desky podporují
-  
+
 ## Zdroje
  - <a href="https://randomnerdtutorials.com/esp-now-auto-pairing-esp32-esp8266/">https://randomnerdtutorials.com/esp-now-auto-pairing-esp32-esp8266/</a>
  - <a href="https://github.com/Servayejc">https://github.com/Servayejc</a>
