@@ -15,7 +15,7 @@
  - [x] deep sleep ESP32
  - [ ] otestovat wemos d1 mini - přidán deep sleep
  - [x] otestovat ESP32 - přidán deep sleep
- - [x] command and state - dokončit v bridge **[ ] chybí část pro tlačítko (zpětný command)**
+ - [x] command and state - dokončit v bridge 
  - [ ] command and state - ESP8266 dokončit
  - [ ] zpracování v HASSIO
  - [ ] upravit README.md
