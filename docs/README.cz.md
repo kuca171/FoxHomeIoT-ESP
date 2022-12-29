@@ -24,6 +24,11 @@ Programy pro desky ESP32 a ESP8266, sloužící k přenosu dat z míst, kde nen�
 
 - [FoxHomeIoT-ESP32-Bridge-sensor](../FoxHomeIoT-Bridge/FoxHomeIoT-ESP32-Bridge-sensor/FoxHomeIoT-ESP32-Bridge-sensor.ino)
 
+    #### Součástky
+    
+        - ESP32
+        - BME280
+
     #### Schéma zapojení
 
     ![alt bridge sensor](img/bridge-sensor.png)
