@@ -8,7 +8,7 @@
 
 - [Popis](#popis)
 - [Přehled komunikace](#přehled-komunikace)
-- [Podporované ESP](#podporované-ESP)
+- [Přehled programů](#přehled-programů)
 - [Podporované čidla](#podporované-čidla)
 - [Zdroje](#zdroje)
 
@@ -26,10 +26,11 @@ Programy pro desky ESP32 a ESP8266, sloužící k přenosu dat z míst, kde nen�
 
 ![alt reading device control](img/communication_device.png)
 
-## Podporované ESP
+## Přehled programů
 
- - ESP32
- - ESP8266 - jen beta, netestováno
+### FoxHomeIoT-Bridge
+
+- [FoxHomeIoT-ESP32-Bridge](FoxHomeIoT-Bridge/FoxHomeIoT-ESP32-Bridge/FoxHomeIoT-ESP32-Bridge.ino)
 
 ## Podporované čidla
 
