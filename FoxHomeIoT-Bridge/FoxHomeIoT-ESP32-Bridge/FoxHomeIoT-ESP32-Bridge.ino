@@ -26,7 +26,7 @@ const char* password = "****";
 const char* mqtt_server = "10.0.0.112";
 const int   mqtt_port   = 1883;
 const char* MQTT_USER = "mymqtt";
-const char* MQTT_PASSWORD = "foxhome1";
+const char* MQTT_PASSWORD = "****";
 
 const char* DEVICE_NAME = "FoxHomeIoT-Bridge"; 
 const char* TOPIC_MQTT_AVAILABILITY   = "bridge/availability";
