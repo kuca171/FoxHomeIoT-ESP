@@ -15,7 +15,7 @@
 
 ## Popis
 
-Programy pro desky ESP32 a ESP8266, sloužící k přenosu dat z míst, kde není dobrý / žádný signál wifi. K přenosu dat, např. z připojených čidel, dochází pomocí protokolu ESP-NOW, který je možné využít na dlouhé vzdálenosti (Espressif uvádí až 450m) a i v místech bez wifi signálu. Přenos dat probíhá z odesílatele na bridge odkud je následně publikován přes MQTT (další možnosti zpracování např.: Home Assistant, Node Red...). Program podporuje automatické párování klienta s bridgem. Přenos probíhá i obrácen pro možnost spuštní připojených zařízení (např. relé).
+Programy pro desky ESP32 a ESP8266, sloužící k přenosu dat z míst, kde není dobrý / žádný signál wifi. K přenosu dat, např. z připojených čidel, dochází pomocí protokolu ESP-NOW, který je možné využít na delší vzdálenosti a i v místech bez wifi signálu. Přenos dat probíhá z odesílatele na bridge odkud je následně publikován přes MQTT (další možnosti zpracování např.: Home Assistant, Node Red...). Program podporuje automatické párování klienta s bridgem. Přenos probíhá i obráceně pro možnost spuštní připojených zařízení (např. relé).
 
 ## Přehled programů
 
