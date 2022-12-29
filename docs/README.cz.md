@@ -30,7 +30,7 @@ Programy pro desky ESP32 a ESP8266, sloužící k přenosu dat z míst, kde nen�
         - ESP32
         - BME280
 
-    #### Schéma zapojení
+    **Schéma zapojení**
 
     ![alt bridge sensor](img/bridge-sensor.png)
 
