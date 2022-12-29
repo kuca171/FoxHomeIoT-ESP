@@ -10,6 +10,7 @@
 - [Přehled programů](#přehled-programů)
 - [Přehled komunikace](#přehled-komunikace)
 - [ESP-NOW popis komunikace](#ESP-NOW-popis-komunikace)
+- [MQTT popis komunikace](#MQTT-popis-komunikace)
 - [Zdroje](#zdroje)
 
 ## Popis
@@ -59,6 +60,8 @@ Programy pro desky ESP32 a ESP8266, sloužící k přenosu dat z míst, kde nen�
 ![alt reading device control](img/communication_device.png)
 
 ## ESP-NOW popis komunikace
+
+## MQTT popis komunikace
 
 ## Zdroje
  - <a href="https://randomnerdtutorials.com/esp-now-auto-pairing-esp32-esp8266/">https://randomnerdtutorials.com/esp-now-auto-pairing-esp32-esp8266/</a>
