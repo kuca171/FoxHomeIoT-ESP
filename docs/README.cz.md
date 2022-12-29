@@ -7,23 +7,14 @@
 ## Obsah
 
 - [Popis](#popis)
-- [Přehled komunikace](#přehled-komunikace)
 - [Přehled programů](#přehled-programů)
+- [Přehled komunikace](#přehled-komunikace)
+
 - [Zdroje](#zdroje)
 
 ## Popis
 
 Programy pro desky ESP32 a ESP8266, sloužící k přenosu dat z míst, kde není dobrý / žádný signál wifi. K přenosu dat, např. z připojených čidel, dochází pomocí protokolu ESP-NOW, který je možné využít na dlouhé vzdálenosti (Espressif uvádí až 450m) a i v místech bez wifi signálu. Přenos dat probíhá z odesílatele na bridge odkud je následně publikován přes MQTT (další možnosti zpracování např.: Home Assistant, Node Red...). Program podporuje automatické párování klienta s bridgem. Přenos probíhá i obrácen pro možnost spuštní připojených zařízení (např. relé).
-
-## Přehled komunikace
-
-### Data ze senzorů
-
-![alt reading sensors data](img/communication_sensors.png)
-
-### Řízení zařízení
-
-![alt reading device control](img/communication_device.png)
 
 ## Přehled programů
 
@@ -51,6 +42,16 @@ Programy pro desky ESP32 a ESP8266, sloužící k přenosu dat z míst, kde nen�
 - [FoxHomeIot-ESP32-sender-device](../FoxHomeIot-Sender/FoxHomeIot-ESP32-sender-device/FoxHomeIot-ESP32-sender-device.ino)
 
 - [FoxHomeIot-ESP8266-Sender](../FoxHomeIot-Sender/FoxHomeIot-ESP8266-Sender/FoxHomeIot-ESP8266-Sender.ino)
+
+## Přehled komunikace
+
+### Data ze senzorů
+
+![alt reading sensors data](img/communication_sensors.png)
+
+### Řízení zařízení
+
+![alt reading device control](img/communication_device.png)
 
 ## Zdroje
  - <a href="https://randomnerdtutorials.com/esp-now-auto-pairing-esp32-esp8266/">https://randomnerdtutorials.com/esp-now-auto-pairing-esp32-esp8266/</a>
