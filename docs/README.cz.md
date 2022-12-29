@@ -19,7 +19,7 @@ Programy pro desky ESP32 a ESP8266, sloužící k přenosu dat z míst, kde nen�
 
 ## Přehled programů
 
-## _FoxHomeIoT-Bridge
+## FoxHomeIoT-Bridge
 
 - [FoxHomeIoT-ESP32-Bridge](../FoxHomeIoT-Bridge/FoxHomeIoT-ESP32-Bridge/FoxHomeIoT-ESP32-Bridge.ino)
 
@@ -39,7 +39,7 @@ Programy pro desky ESP32 a ESP8266, sloužící k přenosu dat z míst, kde nen�
         SDI (SDA) – GPIO21
         SCK (SCL) – GPIO22
 
-## _FoxHomeIot-Sender
+## FoxHomeIot-Sender
 
 - [FoxHomeIot-ESP32-Sender-device-sensor](../FoxHomeIot-Sender/FoxHomeIot-ESP32-Sender-device-sensor/FoxHomeIot-ESP32-Sender-device-sensor.ino)
 
