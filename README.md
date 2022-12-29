@@ -15,7 +15,7 @@
  - [x] deep sleep ESP32
  - [x] otestovat ESP32 - přidán deep sleep
  - [x] command and state - dokončit v bridge 
- - [ ] command and state - otestovat ESP32
+ - [x] command and state - otestovat ESP32
  - [ ] otestovat wemos d1 mini - přidán deep sleep
  - [ ] command and state - ESP8266 dokončit
  - [ ] zpracování v HASSIO
