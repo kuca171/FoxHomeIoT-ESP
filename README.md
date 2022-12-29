@@ -1,5 +1,7 @@
 # FoxHomeIoT-ESP
 
+[Documentation](docs/README.md)
+
 ## TO-DO
 
  - [x] ESP-NOW - receiver (master) - příjemce
