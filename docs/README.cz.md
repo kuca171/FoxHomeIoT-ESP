@@ -30,8 +30,9 @@ Programy pro desky ESP32 a ESP8266, sloužící k přenosu dat z míst, kde nen�
 
 ### FoxHomeIoT-Bridge
 
-- [a FoxHomeIoT-ESP32-Bridge](../FoxHomeIoT-Bridge/FoxHomeIoT-ESP32-Bridge/FoxHomeIoT-ESP32-Bridge.ino)
+- [FoxHomeIoT-ESP32-Bridge](../FoxHomeIoT-Bridge/FoxHomeIoT-ESP32-Bridge/FoxHomeIoT-ESP32-Bridge.ino)
 
+- [FoxHomeIoT-ESP32-Bridge-sensor](../FoxHomeIoT-Bridge/FoxHomeIoT-ESP32-Bridge-sensor/FoxHomeIoT-ESP32-Bridge-sensor.ino)
 
 
 ## Podporované čidla
