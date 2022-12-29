@@ -9,7 +9,6 @@
 - [Popis](#popis)
 - [Přehled komunikace](#přehled-komunikace)
 - [Přehled programů](#přehled-programů)
-- [Podporované čidla](#podporované-čidla)
 - [Zdroje](#zdroje)
 
 ## Popis
@@ -43,11 +42,6 @@ Programy pro desky ESP32 a ESP8266, sloužící k přenosu dat z míst, kde nen�
 - [FoxHomeIot-ESP32-sender-device](../FoxHomeIot-Sender/FoxHomeIot-ESP32-sender-device/FoxHomeIot-ESP32-sender-device.ino)
 
 - [FoxHomeIot-ESP8266-Sender](../FoxHomeIot-Sender/FoxHomeIot-ESP8266-Sender/FoxHomeIot-ESP8266-Sender.ino)
-
-## Podporované čidla
-
- - BME280
- - programy je možné upravit, tj. je možné připojit jakékoliv čidla, která dané desky podporují
 
 ## Zdroje
  - <a href="https://randomnerdtutorials.com/esp-now-auto-pairing-esp32-esp8266/">https://randomnerdtutorials.com/esp-now-auto-pairing-esp32-esp8266/</a>
