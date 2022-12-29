@@ -45,6 +45,20 @@ Programy pro desky ESP32 a ESP8266, sloužící k přenosu dat z míst, kde nen�
 
 - [FoxHomeIot-ESP32-sender-sensor](../FoxHomeIot-Sender/FoxHomeIot-ESP32-sender-sensor/FoxHomeIot-ESP32-sender-sensor.ino)
 
+   **Součástky**
+    
+        - ESP32
+        - BME280
+
+    **Schéma zapojení**
+
+    ![alt sender sensor](img/bridge-sensor.png)
+
+        VCC – 3.3V
+        GND – GND
+        SDI (SDA) – GPIO21
+        SCK (SCL) – GPIO22
+
 - [FoxHomeIot-ESP32-sender-device](../FoxHomeIot-Sender/FoxHomeIot-ESP32-sender-device/FoxHomeIot-ESP32-sender-device.ino)
 
 - [FoxHomeIot-ESP8266-Sender](../FoxHomeIot-Sender/FoxHomeIot-ESP8266-Sender/FoxHomeIot-ESP8266-Sender.ino)
