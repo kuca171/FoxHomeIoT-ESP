@@ -19,8 +19,8 @@
 // ----------------------------------------------------------------------------
 
 // wifi setting
-const char* ssid = "kuca";
-const char* password = "lisak397";
+const char* ssid = "****";
+const char* password = "****";
 
 // mqtt setting
 const char* mqtt_server = "10.0.0.112";
