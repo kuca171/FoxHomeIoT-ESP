@@ -38,6 +38,10 @@ Programy pro desky ESP32 a ESP8266, sloužící k přenosu dat z míst, kde nen�
 
 - [FoxHomeIot-ESP32-Sender-device-sensor](../FoxHomeIot-Sender/FoxHomeIot-ESP32-Sender-device-sensor/FoxHomeIot-ESP32-Sender-device-sensor.ino)
 
+- [FoxHomeIot-ESP32-Sender-sensor](../FoxHomeIot-Sender/FoxHomeIot-ESP32-Sender-sensor/FoxHomeIot-ESP32-Sender-sensor.ino)
+
+- [FoxHomeIot-ESP32-Sender-device](../FoxHomeIot-Sender/FoxHomeIot-ESP32-Sender-device/FoxHomeIot-ESP32-Sender-device.ino)
+
 ## Podporované čidla
 
  - BME280
