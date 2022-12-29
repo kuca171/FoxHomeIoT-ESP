@@ -20,11 +20,11 @@ Programy pro desky ESP32 a ESP8266, sloužící k přenosu dat z míst, kde nen�
 
 ### Data ze senzorů
 
-![alt reading sensors data](img/1.png)
+![alt reading sensors data](img/communication_sensors.png)
 
 ### Řízení zařízení
 
-![alt reading device control](img/2.png)
+![alt reading device control](img/communication_device.png)
 
 ## Podporované ESP
 
