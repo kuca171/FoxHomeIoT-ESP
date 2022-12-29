@@ -34,13 +34,15 @@ Programy pro desky ESP32 a ESP8266, sloužící k přenosu dat z míst, kde nen�
 
 - [FoxHomeIoT-ESP32-Bridge-sensor](../FoxHomeIoT-Bridge/FoxHomeIoT-ESP32-Bridge-sensor/FoxHomeIoT-ESP32-Bridge-sensor.ino)
 
-### FoxHomeIot-ESP32-Sender
+### FoxHomeIot-Sender
 
 - [FoxHomeIot-ESP32-Sender-device-sensor](../FoxHomeIot-Sender/FoxHomeIot-ESP32-Sender-device-sensor/FoxHomeIot-ESP32-Sender-device-sensor.ino)
 
 - [FoxHomeIot-ESP32-sender-sensor](../FoxHomeIot-Sender/FoxHomeIot-ESP32-sender-sensor/FoxHomeIot-ESP32-sender-sensor.ino)
 
 - [FoxHomeIot-ESP32-sender-device](../FoxHomeIot-Sender/FoxHomeIot-ESP32-sender-device/FoxHomeIot-ESP32-sender-device.ino)
+
+- [FoxHomeIot-ESP8266-Sender](../FoxHomeIot-Sender/FoxHomeIot-ESP8266-Sender/FoxHomeIot-ESP8266-Sender.ino)
 
 ## Podporované čidla
 
