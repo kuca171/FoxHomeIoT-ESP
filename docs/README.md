@@ -20,11 +20,11 @@ Programs for ESP32 and ESP8266 boards, used to transfer data from places where t
 
 ### Reading sensors
 
-![alt reading sensors data](img/1.png)
+![alt reading sensors data](img/communication_sensor.png)
 
 ### Device control
 
-![alt reading device control](img/2.png)
+![alt reading device control](img/communication_device.png)
 
 ## Supported ESP device
 
