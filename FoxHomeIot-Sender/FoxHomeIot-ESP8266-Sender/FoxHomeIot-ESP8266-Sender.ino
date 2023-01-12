@@ -149,7 +149,7 @@ void OnDataRecv(uint8_t * mac, uint8_t *incomingData, uint8_t len) {
     break;
 
   case COMMAND:     // we received command data from server
-    memcpy(&inCommandData, incomingData, sizeof(inCommandData));
+    //memcpy(&inCommandData, incomingData, sizeof(inCommandData));
     break;
   }  
 }
@@ -289,7 +289,3 @@ void ReadAndSendDataSensors () {
   // Send message via ESP-NOW to all peers 
   esp_now_send(pairingData.macAddr, (uint8_t *) &myData, sizeof(myData));
 }
-
-// ----------------------------------------------------------------------------
-// SendCommandDataState
-// ----------------------------------------------------------------------------
