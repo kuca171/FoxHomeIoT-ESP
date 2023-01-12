@@ -21,7 +21,7 @@ Programy pro desky ESP32 a ESP8266, sloužící k přenosu dat z míst, kde nen�
 
 ## FoxHomeIoT-Bridge
 
-- [FoxHomeIoT-ESP32-Bridge](../FoxHomeIoT-Bridge/FoxHomeIoT-ESP32-Bridge/FoxHomeIoT-ESP32-Bridge.ino)
+- [FoxHomeIoT-ESP32-Bridge](https://github.com/kuca171/FoxHomeIoT-ESP/blob/main/FoxHomeIoT-Bridge/FoxHomeIoT-ESP32-Bridge/FoxHomeIoT-ESP32-Bridge.ino)
 
 - [FoxHomeIoT-ESP32-Bridge-sensor](https://github.com/kuca171/FoxHomeIoT-ESP/blob/main/FoxHomeIoT-Bridge/FoxHomeIoT-ESP32-Bridge-sensor/FoxHomeIoT-ESP32-Bridge-sensor.ino)
 
@@ -41,7 +41,7 @@ Programy pro desky ESP32 a ESP8266, sloužící k přenosu dat z míst, kde nen�
 
 ## FoxHomeIot-Sender
 
-- [FoxHomeIot-ESP32-Sender-device-sensor](../FoxHomeIot-Sender/FoxHomeIot-ESP32-Sender-device-sensor/FoxHomeIot-ESP32-Sender-device-sensor.ino)
+- [FoxHomeIot-ESP32-Sender-device-sensor](https://github.com/kuca171/FoxHomeIoT-ESP/blob/main/FoxHomeIot-Sender/FoxHomeIot-ESP32-Sender-device-sensor/FoxHomeIot-ESP32-Sender-device-sensor.ino)
 
    **Součástky**
 
@@ -63,7 +63,7 @@ Programy pro desky ESP32 a ESP8266, sloužící k přenosu dat z míst, kde nen�
          SDI (SDA) – GPIO21
          SCK (SCL) – GPIO22
 
-- [FoxHomeIot-ESP32-sender-sensor](../FoxHomeIot-Sender/FoxHomeIot-ESP32-sender-sensor/FoxHomeIot-ESP32-sender-sensor.ino)
+- [FoxHomeIot-ESP32-sender-sensor](https://github.com/kuca171/FoxHomeIoT-ESP/blob/main/FoxHomeIot-Sender/FoxHomeIot-ESP32-sender-sensor/FoxHomeIot-ESP32-sender-sensor.ino)
 
    **Součástky**
     
@@ -79,7 +79,7 @@ Programy pro desky ESP32 a ESP8266, sloužící k přenosu dat z míst, kde nen�
         SDI (SDA) – GPIO21
         SCK (SCL) – GPIO22
 
-- [FoxHomeIot-ESP32-sender-device](../FoxHomeIot-Sender/FoxHomeIot-ESP32-sender-device/FoxHomeIot-ESP32-sender-device.ino)
+- [FoxHomeIot-ESP32-sender-device](https://github.com/kuca171/FoxHomeIoT-ESP/blob/main/FoxHomeIot-Sender/FoxHomeIot-ESP32-sender-device/FoxHomeIot-ESP32-sender-device.ino)
 
    **Součástky**
 
@@ -93,7 +93,7 @@ Programy pro desky ESP32 a ESP8266, sloužící k přenosu dat z míst, kde nen�
    
    ![alt sender device sensor](img/Sender-device.png)
 
-- [FoxHomeIot-ESP8266-Sender](../FoxHomeIot-Sender/FoxHomeIot-ESP8266-Sender/FoxHomeIot-ESP8266-Sender.ino)
+- [FoxHomeIot-ESP8266-Sender](https://github.com/kuca171/FoxHomeIoT-ESP/blob/main/FoxHomeIot-Sender/FoxHomeIot-ESP8266-Sender/FoxHomeIot-ESP8266-Sender.ino)
 
 ## Přehled komunikace
 
