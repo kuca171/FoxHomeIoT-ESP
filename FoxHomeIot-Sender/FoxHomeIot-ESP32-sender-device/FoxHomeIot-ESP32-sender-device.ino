@@ -201,6 +201,10 @@ PairingStatus autoPairing(){
   return pairingStatus;
 }  
 
+// ----------------------------------------------------------------------------
+// setup
+// ----------------------------------------------------------------------------
+
 void setup() {
   Serial.begin(115200);
   Serial.println();
@@ -230,39 +234,45 @@ void setup() {
   pinMode(button_pin, INPUT);
 }
 
+// ----------------------------------------------------------------------------
+// loop
+// ----------------------------------------------------------------------------
+
 void loop() {
-  int reading = digitalRead(button_pin);
+  if (autoPairing() == PAIR_PAIRED) {
+    int reading = digitalRead(button_pin);
 
-  if (reading != lastButtonState) {
-    lastDebounceTime = millis(); // reset the debouncing timer
-  }
+    if (reading != lastButtonState) {
+      lastDebounceTime = millis(); // reset the debouncing timer
+    }
 
-  if ((millis() - lastDebounceTime) > debounceDelay) {
-    // whatever the reading is at, it's been there for longer than the debounce
-    // delay, so take it as the actual current state:
+    if ((millis() - lastDebounceTime) > debounceDelay) {
+      // whatever the reading is at, it's been there for longer than the debounce
+      // delay, so take it as the actual current state:
 
-    // if the button state has changed:
-    if (reading != buttonState) {
-      buttonState = reading;
+      // if the button state has changed:
+      if (reading != buttonState) {
+        buttonState = reading;
 
-      // only toggle the LED if the new button state is HIGH
-      if (buttonState == HIGH) {
-        ledState = !ledState;
+        // only toggle the LED if the new button state is HIGH
+        if (buttonState == HIGH) {
+          ledState = !ledState;
 
-        // send esp-now
-        myCommandStateData.id      = BOARD_ID;
-        myCommandStateData.msgType = COMMAND; 
-        myCommandStateData.state   = ledState; 
-        esp_err_t result  = esp_now_send(serverAddress, (uint8_t *) &myCommandStateData, sizeof(myCommandStateData));
+          // send esp-now
+          myCommandStateData.id      = BOARD_ID;
+          myCommandStateData.msgType = COMMAND; 
+          myCommandStateData.state   = ledState; 
+          esp_err_t result  = esp_now_send(serverAddress, (uint8_t *) &myCommandStateData, sizeof(myCommandStateData));
+        }
       }
     }
+
+    // set the LED:
+    digitalWrite(led_pin, ledState);
+
+    // save the reading. Next time through the loop, it'll be the lastButtonState:
+    lastButtonState = reading;
   }
-
-  // set the LED:
-  digitalWrite(led_pin, ledState);
-
-  // save the reading. Next time through the loop, it'll be the lastButtonState:
-  lastButtonState = reading;
 }
 
 // ----------------------------------------------------------------------------
