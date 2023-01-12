@@ -23,6 +23,10 @@ Programy pro desky ESP32 a ESP8266, sloužící k přenosu dat z míst, kde nen�
 
 - [FoxHomeIoT-ESP32-Bridge](https://github.com/kuca171/FoxHomeIoT-ESP/blob/main/FoxHomeIoT-Bridge/FoxHomeIoT-ESP32-Bridge/FoxHomeIoT-ESP32-Bridge.ino)
 
+    **Součástky**
+    
+        - ESP32
+
 - [FoxHomeIoT-ESP32-Bridge-sensor](https://github.com/kuca171/FoxHomeIoT-ESP/blob/main/FoxHomeIoT-Bridge/FoxHomeIoT-ESP32-Bridge-sensor/FoxHomeIoT-ESP32-Bridge-sensor.ino)
 
     **Součástky**
@@ -94,6 +98,11 @@ Programy pro desky ESP32 a ESP8266, sloužící k přenosu dat z míst, kde nen�
    ![alt sender device sensor](img/Sender-device.png)
 
 - [FoxHomeIot-ESP8266-Sender](https://github.com/kuca171/FoxHomeIoT-ESP/blob/main/FoxHomeIot-Sender/FoxHomeIot-ESP8266-Sender/FoxHomeIot-ESP8266-Sender.ino)
+
+    **Součástky**
+    
+        - ESP32
+        - BME280
 
 ## Přehled komunikace
 
