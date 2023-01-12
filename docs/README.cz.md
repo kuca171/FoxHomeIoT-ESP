@@ -81,6 +81,18 @@ Programy pro desky ESP32 a ESP8266, sloužící k přenosu dat z míst, kde nen�
 
 - [FoxHomeIot-ESP32-sender-device](../FoxHomeIot-Sender/FoxHomeIot-ESP32-sender-device/FoxHomeIot-ESP32-sender-device.ino)
 
+   **Součástky**
+
+      - ESP32
+      - Tlačítko
+      - LED
+      - 330Ω odpor
+      - 10kΩ odpor
+    
+   **Schéma zapojení**
+   
+   ![alt sender device sensor](img/Sender-device.png)
+
 - [FoxHomeIot-ESP8266-Sender](../FoxHomeIot-Sender/FoxHomeIot-ESP8266-Sender/FoxHomeIot-ESP8266-Sender.ino)
 
 ## Přehled komunikace
